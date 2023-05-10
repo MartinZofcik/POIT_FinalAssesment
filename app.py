@@ -58,6 +58,7 @@ def disconnect_request():
     emit('my_response',
          {'data': 'Disconnected!', 'count': session['receive_count']})
     disconnect()
+    
 
 @socketio.on('connect', namespace='/test')
 def test_connect():
